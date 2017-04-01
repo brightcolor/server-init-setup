@@ -7,7 +7,7 @@ apt-get -y safe-upgrade
 apt-get -y install aptitude
 aptitude update
 
-aptitude install lsb-release figlet -y
+aptitude install lsb-release figlet update-notifier -y
 # install figlet to enable ASCII art
 
 # create directory
