@@ -25,7 +25,6 @@ aptitude update
 aptitude install -y lsb-release figlet python-apt mc iotop htop iftop bash-completion command-not-found vnstat mutt nano webmin apt-transport-https 
 aptitude -y -t jessie-backports install certbot openssl
 
-
 mkdir /etc/update-motd.d/
 cd /etc/update-motd.d/
 
@@ -44,3 +43,9 @@ update-command-not-found
 wget --no-check-certificate -O /root/.bash_aliases https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bash_aliases
 rm /root/.bashrc
 wget --no-check-certificate -O /root/.bashrc https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bashrc
+
+#mv /etc/postfix/smtpd.cert /etc/postfix/smtpd.cert-bak
+#mv /etc/postfix/smtpd.key /etc/postfix/smtpd.key-bak
+#mv /usr/local/ispconfig/interface/ssl/ispserver.bundle /usr/local/ispconfig/interface/ssl/ispserver.bundle-back
+#mv /usr/local/ispconfig/interface/ssl/ispserver.crt /usr/local/ispconfig/interface/ssl/ispserver.crt-back
+#mv /usr/local/ispconfig/interface/ssl/ispserver.key /usr/local/ispconfig/interface/ssl/ispserver.key-back
