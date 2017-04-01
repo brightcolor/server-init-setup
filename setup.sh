@@ -16,11 +16,11 @@ mkdir /etc/update-motd.d/
 cd /etc/update-motd.d/
 # create dynamic files
 
-wget --no-check-certificate -O 00-header https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/00-header
-wget --no-check-certificate -O 10-sysinfo https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/10-sysinfo
-wget --no-check-certificate -O 20-updates https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/20-updates
-wget --no-check-certificate -O 90-footer https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/90-footer
-wget -O nancyj.flf http://www.figlet.org/fonts/nancyj.flf
+wget --no-check-certificate -O /etc/update-motd.d/00-header https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/00-header
+wget --no-check-certificate -O /etc/update-motd.d//etc/update-motd.d//etc/update-motd.d//etc/update-motd.d/10-sysinfo https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/10-sysinfo
+wget --no-check-certificate -O /etc/update-motd.d//etc/update-motd.d//etc/update-motd.d/20-updates https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/20-updates
+wget --no-check-certificate -O /etc/update-motd.d//etc/update-motd.d/90-footer https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/90-footer
+wget -O /etc/update-motd.d/nancyj.flf http://www.figlet.org/fonts/nancyj.flf
 
 chmod +x /etc/update-motd.d/*
 # remove MOTD file
