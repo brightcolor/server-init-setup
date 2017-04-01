@@ -44,7 +44,8 @@ rm /etc/motd
 # symlink dynamic MOTD file
 ln -s /var/run/motd /etc/motd
 
+update-command-not-found
 
 wget --no-check-certificate -O /root/.bash_aliases https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bash_aliases
-rm /root/bashrc
+rm /root/.bashrc
 wget --no-check-certificate -O /root/.bashrc https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bashrc
