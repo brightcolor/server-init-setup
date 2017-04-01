@@ -22,7 +22,7 @@ echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/
 
 aptitude update
 
-aptitude install -y lsb-release figlet update-notifier python-apt mc iotop htop iftop vnstat mutt nano ca-certificates webmin apt-transport-https 
+aptitude install -y lsb-release figlet update-notifier python-apt mc iotop htop iftop bash_completion command-not-found vnstat mutt nano ca-certificates webmin apt-transport-https 
 aptitude -y -t jessie-backports install certbot openssl
 
 
