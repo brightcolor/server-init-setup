@@ -5,10 +5,26 @@
 apt-get update
 apt-get -y safe-upgrade
 apt-get -y install aptitude
+
+cd /root
+wget http://www.webmin.com/jcameron-key.asc
+apt-key add jcameron-key.asc
+wget https://www.dotdeb.org/dotdeb.gpg
+apt-key add dotdeb.gpg
+
+echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
+echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
+echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
+echo "deb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
+echo "deb http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
+echo "deb-src http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
+echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
+
 aptitude update
 
-aptitude install lsb-release figlet update-notifier -y
-# install figlet to enable ASCII art
+aptitude install -y lsb-release figlet update-notifier python-apt mc iotop htop iftop vnstat mutt nano ca-certificates webmin apt-transport-https 
+aptitude -y -t jessie-backports install certbot openssl
+
 
 # create directory
 mkdir /etc/update-motd.d/
@@ -27,3 +43,8 @@ chmod +x /etc/update-motd.d/*
 rm /etc/motd
 # symlink dynamic MOTD file
 ln -s /var/run/motd /etc/motd
+
+
+wget --no-check-certificate -O /root/.bash_aliases https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bash_aliases
+rm /root/bashrc
+wget --no-check-certificate -O /root/.bashrc https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bashrc
