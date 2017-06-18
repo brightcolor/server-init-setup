@@ -43,6 +43,7 @@ update-command-not-found
 wget --no-check-certificate -O /root/.bash_aliases https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bash_aliases
 rm /root/.bashrc
 wget --no-check-certificate -O /root/.bashrc https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bashrc
+source /root/.bashrc
 
 #mv /etc/postfix/smtpd.cert /etc/postfix/smtpd.cert-bak
 #mv /etc/postfix/smtpd.key /etc/postfix/smtpd.key-bak
