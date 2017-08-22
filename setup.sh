@@ -7,23 +7,23 @@ apt-get -y safe-upgrade
 apt-get -y install aptitude ca-certificates
 aptitude update
 
-cd /root
-wget http://www.webmin.com/jcameron-key.asc
-apt-key add jcameron-key.asc
-wget https://www.dotdeb.org/dotdeb.gpg
-apt-key add dotdeb.gpg
+#cd /root
+#wget http://www.webmin.com/jcameron-key.asc
+#apt-key add jcameron-key.asc
+#wget https://www.dotdeb.org/dotdeb.gpg
+#apt-key add dotdeb.gpg
 
 echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
-echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
-echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
-echo "deb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
-echo "deb http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
-echo "deb-src http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
+#echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
+#echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
+#echo "deb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
+#echo "deb http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
+#echo "deb-src http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
 
 aptitude update
 
 aptitude install -y lsb-release figlet python-apt mc iotop htop iftop bash-completion command-not-found vnstat mutt nano webmin apt-transport-https 
-aptitude -y -t jessie-backports install certbot openssl
+#aptitude -y -t jessie-backports install certbot openssl
 
 mkdir /etc/update-motd.d/
 cd /etc/update-motd.d/
