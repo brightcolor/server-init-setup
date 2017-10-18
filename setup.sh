@@ -7,9 +7,9 @@ apt-get -y safe-upgrade
 apt-get -y install aptitude ca-certificates
 aptitude update
 
-#cd /root
-#wget http://www.webmin.com/jcameron-key.asc
-#apt-key add jcameron-key.asc
+cd /root
+wget http://www.webmin.com/jcameron-key.asc
+apt-key add jcameron-key.asc
 #wget https://www.dotdeb.org/dotdeb.gpg
 #apt-key add dotdeb.gpg
 
@@ -22,7 +22,7 @@ echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/
 
 aptitude update
 
-aptitude install -y lsb-release figlet python-apt mc iotop htop iftop bash-completion command-not-found vnstat mutt nano webmin apt-transport-https 
+aptitude install -y lsb-release figlet python-apt mc iotop htop iftop bash-completion certbot command-not-found vnstat mutt nano webmin apt-transport-https 
 #aptitude -y -t jessie-backports install certbot openssl
 
 mkdir /etc/update-motd.d/
