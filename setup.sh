@@ -22,7 +22,7 @@ cd /root
 
 aptitude update
 
-aptitude install -y lsb-release figlet python-apt mc iotop ntop htop iftop bash-completion command-not-found vnstat mutt nano apt-transport-https 
+aptitude install -y lsb-release figlet python-apt mc iotop htop iftop bash-completion command-not-found vnstat mutt nano apt-transport-https 
 #aptitude -y -t jessie-backports install certbot openssl
 
 mkdir /etc/update-motd.d/
