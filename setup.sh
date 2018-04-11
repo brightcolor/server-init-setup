@@ -20,6 +20,10 @@ cd /root
 #echo "deb http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
 #echo "deb-src http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
 
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+
+
 aptitude update
 
 aptitude install -y lsb-release figlet python-apt mc iotop htop iftop bash-completion command-not-found vnstat mutt nano apt-transport-https 
