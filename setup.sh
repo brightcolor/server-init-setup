@@ -4,7 +4,7 @@
 
 apt-get update
 apt-get -y safe-upgrade
-apt-get -y install aptitude ca-certificates
+apt-get -y install aptitude ca-certificates sudo
 aptitude update
 
 cd /root
