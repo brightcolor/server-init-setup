@@ -32,22 +32,22 @@ aptitude install -y lsb-release figlet python-apt mc iotop htop iftop bash-compl
 mkdir /etc/update-motd.d/
 cd /etc/update-motd.d/
 
-wget --no-check-certificate -O /etc/update-motd.d/00-header https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/00-header
-wget --no-check-certificate -O /etc/update-motd.d/10-sysinfo https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/10-sysinfo
-wget --no-check-certificate -O /etc/update-motd.d/20-updates https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/20-updates
-wget --no-check-certificate -O /etc/update-motd.d/90-footer https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/90-footer
-wget -O /etc/update-motd.d/nancyj.flf http://www.figlet.org/fonts/nancyj.flf
+#wget --no-check-certificate -O /etc/update-motd.d/00-header https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/00-header
+#wget --no-check-certificate -O /etc/update-motd.d/10-sysinfo https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/10-sysinfo
+#wget --no-check-certificate -O /etc/update-motd.d/20-updates https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/20-updates
+#wget --no-check-certificate -O /etc/update-motd.d/90-footer https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/90-footer
+#wget -O /etc/update-motd.d/nancyj.flf http://www.figlet.org/fonts/nancyj.flf
 
-chmod +x /etc/update-motd.d/*
-rm /etc/motd
-ln -s /var/run/motd /etc/motd
+#chmod +x /etc/update-motd.d/*
+#rm /etc/motd
+#ln -s /var/run/motd /etc/motd
 
 update-command-not-found
 
 wget --no-check-certificate -O /root/.bash_aliases https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bash_aliases
 rm /root/.bashrc
 wget --no-check-certificate -O /root/.bashrc https://raw.githubusercontent.com/brightcolor/server-init-setup/master/files/.bashrc
-source /root/.bashrc
+#source /root/.bashrc
 
 #mv /etc/postfix/smtpd.cert /etc/postfix/smtpd.cert-bak
 #mv /etc/postfix/smtpd.key /etc/postfix/smtpd.key-bak
