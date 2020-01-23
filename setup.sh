@@ -54,3 +54,4 @@ wget --no-check-certificate -O /root/.bashrc https://raw.githubusercontent.com/b
 #mv /usr/local/ispconfig/interface/ssl/ispserver.bundle /usr/local/ispconfig/interface/ssl/ispserver.bundle-back
 #mv /usr/local/ispconfig/interface/ssl/ispserver.crt /usr/local/ispconfig/interface/ssl/ispserver.crt-back
 #mv /usr/local/ispconfig/interface/ssl/ispserver.key /usr/local/ispconfig/interface/ssl/ispserver.key-back
+echo "ok"
