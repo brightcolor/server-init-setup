@@ -10,24 +10,20 @@ aptitude update
 cd /root
 wget http://www.webmin.com/jcameron-key.asc
 apt-key add jcameron-key.asc
-#wget https://www.dotdeb.org/dotdeb.gpg
-#apt-key add dotdeb.gpg
+rm jcameron-key.asc
 
 echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
-#echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
-#echo "deb http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
-#echo "deb-src http://packages.dotdeb.org jessie all" >> /etc/apt/sources.list
-#echo "deb http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
-#echo "deb-src http://packages.dotdeb.org jessie-nginx-http2 all" >> /etc/apt/sources.list
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 
-#sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-#echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+apttitude install software-properties-common dirmngr
+apttitude adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+add-apt-repository 'deb [arch=amd64] http://ftp.hosteurope.de/mirror/mariadb.org/repo/10.4/debian buster main'
 
 
 aptitude update
 
-aptitude install -y lsb-release figlet python-apt mc iotop htop iftop bash-completion git nload command-not-found vnstat mutt nano apt-transport-https 
-#aptitude -y -t jessie-backports install certbot openssl
+aptitude install -y ncdu lsb-release figlet python-apt mc iotop htop iftop bash-completion git nload command-not-found vnstat mutt nano apt-transport-https 
 
 mkdir /etc/update-motd.d/
 cd /etc/update-motd.d/
