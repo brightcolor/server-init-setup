@@ -7,18 +7,18 @@ apt-get -y safe-upgrade
 apt-get -y install aptitude ca-certificates sudo
 aptitude update
 
-cd /root
-wget http://www.webmin.com/jcameron-key.asc
-apt-key add jcameron-key.asc
-rm jcameron-key.asc
+#cd /root
+#wget http://www.webmin.com/jcameron-key.asc
+#apt-key add jcameron-key.asc
+#rm jcameron-key.asc
 
-echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
-sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+#echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
+#sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+#echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 
-apttitude install software-properties-common dirmngr
-apttitude adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
-add-apt-repository 'deb [arch=amd64] http://ftp.hosteurope.de/mirror/mariadb.org/repo/10.4/debian buster main'
+#aptitude install software-properties-common dirmngr
+#aptitude adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+#add-apt-repository 'deb [arch=amd64] http://ftp.hosteurope.de/mirror/mariadb.org/repo/10.4/debian buster main'
 
 
 aptitude update
