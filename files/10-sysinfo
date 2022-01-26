@@ -37,8 +37,8 @@ printf "Usage on /:\t%s\tSwap usage:\t%s\n" $root_usage $swap_usage
 printf "Local Users:\t%s\tProcesses:\t%s\n" $users $processes
 echo
 
-echo "installed ISPConfig-Version: $(grep ^define.*ISPC_APP_VERSION /usr/local/ispconfig/server/lib/config.inc.php | awk {'print $2'} | sed "s/');//" | sed "s/'//")"
-wget -q http://www.ispconfig.org/downloads/ispconfig3_version.txt -O /tmp/ispconfig3_version.txt
-echo "current   ISPConfig-Version: $(cat /tmp/ispconfig3_version.txt)"
+#echo "installed ISPConfig-Version: $(grep ^define.*ISPC_APP_VERSION /usr/local/ispconfig/server/lib/config.inc.php | awk {'print $2'} | sed "s/');//" | sed "s/'//")"
+#wget -q http://www.ispconfig.org/downloads/ispconfig3_version.txt -O /tmp/ispconfig3_version.txt
+#echo "current   ISPConfig-Version: $(cat /tmp/ispconfig3_version.txt)"
 echo
 echo
