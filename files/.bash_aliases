@@ -1,3 +1,4 @@
+alias wp='sudo -u $(stat -c '%U' index.php) /usr/local/bin/wp'
 alias mcv='mc /var/www/$1'
 alias mkdir="mkdir -p"
 alias ls="ls -hF --color=auto"
