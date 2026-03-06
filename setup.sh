@@ -23,7 +23,7 @@ aptitude update
 
 aptitude update
 
-aptitude install -y ncdu lsb-release figlet python-apt mc iotop htop iftop bash-completion git nload command-not-found vnstat mutt nano apt-transport-https 
+aptitude install -y ncdu mc iotop htop iftop bash-completion git nload command-not-found vnstat mutt nano apt-transport-https 
 
 mkdir /etc/update-motd.d/
 cd /etc/update-motd.d/
